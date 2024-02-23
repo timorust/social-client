@@ -42,3 +42,7 @@ export const {
   useLazyGetPostByIdQuery,
   useDeletePostMutation,
 } = postApi
+
+export const {
+  endpoints: { createPost, deletePost, getPostById, getAllPosts },
+} = postApi
