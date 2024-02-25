@@ -1,3 +1,9 @@
+import { Header } from "../header"
+
 export const Layout = () => {
-  return <div>Layout</div>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
