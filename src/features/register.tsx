@@ -80,7 +80,7 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
 
       <div className="flex gap-2 justify-end">
         <Button fullWidth color="primary" type="submit" isLoading={isLoading}>
-          Login
+          Register
         </Button>
       </div>
     </form>
