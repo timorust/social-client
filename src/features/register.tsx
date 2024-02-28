@@ -54,6 +54,13 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
       />
       <Input
         control={control}
+        name="email"
+        label="Email"
+        type="email"
+        required="Required"
+      />
+      <Input
+        control={control}
         name="password"
         label="Password"
         type="password"
@@ -67,7 +74,7 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
           className="cursor-pointer"
           onPress={() => setSelected("login")}
         >
-          Log in
+          Login
         </Link>
       </p>
 
