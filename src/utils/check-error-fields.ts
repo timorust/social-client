@@ -1,4 +1,4 @@
-export function hasErrorFields(
+export function hasErrorField(
   err: unknown,
 ): err is { data: { error: string } } {
   return (

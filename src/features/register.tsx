@@ -2,8 +2,9 @@ import { Button, Link } from "@nextui-org/react"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { useRegisterMutation } from "../app/services/userApi"
+import { ErrorMessage } from "../components/error-message"
 import { Input } from "../input"
-import { hasErrorFields } from "../utils/check-error-fields"
+import { hasErrorField } from "../utils/check-error-fields"
 
 type RegisterProps = {
   email: string
@@ -35,10 +36,10 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
 
   const onSubmit = async (data: RegisterProps) => {
     try {
-      await register(data).unwrap
+      await register(data).unwrap()
       setSelected("login")
     } catch (error) {
-      if (hasErrorFields(error)) setError(error.data.error)
+      if (hasErrorField(error)) setError(error.data.error)
     }
   }
 
@@ -58,7 +59,7 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
         type="password"
         required="Required"
       />
-
+      <ErrorMessage error={error} />
       <p className="text-center text-small">
         Already have an account?{" "}
         <Link
