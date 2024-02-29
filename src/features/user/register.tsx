@@ -1,10 +1,10 @@
 import { Button, Link } from "@nextui-org/react"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { useRegisterMutation } from "../app/services/userApi"
-import { ErrorMessage } from "../components/error-message"
-import { Input } from "../input"
-import { hasErrorField } from "../utils/check-error-fields"
+import { useRegisterMutation } from "../../app/services/userApi"
+import { ErrorMessage } from "../../components/error-message"
+import { Input } from "../../input"
+import { hasErrorField } from "../../utils/check-error-fields"
 
 type RegisterProps = {
   email: string
