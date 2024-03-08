@@ -9,7 +9,7 @@ import { ErrorMessage } from "../error-message"
 
 export const CreatePost = () => {
   const [createPost] = useCreatePostMutation()
-  const { triggerAllPosts } = useLazyGetAllPostsQuery()
+  const [triggerAllPosts] = useLazyGetAllPostsQuery()
 
   const {
     handleSubmit,
